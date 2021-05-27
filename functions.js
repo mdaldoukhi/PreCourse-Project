@@ -19,16 +19,13 @@
  * sumOdds([3, 7, 8, 15, 2, 1, 13]) -> 39
  */
 function sumOdds(numbers) {
-    var evens = [];
-    var odds = [];
+    var odds = 0;
     for (var i = 0; i < numbers.length; i++) {
-        if ((numbers[i] % 2) != 1) {
-            evens.push(numbers[i]);
-        }else {
-            odds.push(numbers[i]);
+        if ((numbers[i] % 2) == 1) {
+          odds +=  numbers[i]
         }
     }
-    return odds.reduce((a, b) => a + b, 0)
+    return odds;
 }
 
 //console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
